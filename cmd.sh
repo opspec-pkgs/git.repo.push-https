@@ -1,8 +1,9 @@
 #!/usr/bin/env sh
 
+set -e
+
 if [ "$dstRepo" == " " ]; then
-    echo "dstRepo not provided; will push to configured origin push url"
-    # fallback to use configured origin push url as dstRepo
+    # dstRepo not provided; git will push to configured origin push url
     dstRepo=$(git remote get-url --push origin)
 fi
 
