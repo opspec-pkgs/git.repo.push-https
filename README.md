@@ -1,5 +1,5 @@
 # problem statement
-clones a git repo via https transport
+pushes a git repo via https transport
 
 # example usage
 
@@ -22,6 +22,12 @@ opctl run github.com/opspec-pkgs/git.push-https#VERSION
 ```yaml
 op:
    pkg: { ref: github.com/opspec-pkgs/git.push-https#VERSION }
-   inputs: { username, password, url }
-   outputs: { repo }
+   inputs:
+      srcRepo:
+      username:
+      password:
+      # begin optional args
+      dstRepo:
+      refSpec:
+      # end optional args
 ```

@@ -8,9 +8,11 @@ inputs:
   dstRepo:
     string:
       description: destination of the push; can be a Url or name of a remote
+      default: " "
   refSpec:
     string:
-      destination: spec of refs to push (in localRefPattern:remoteRefPattern format); see https://git-scm.com/book/en/v2/Git-Internals-The-Refspec for details
+      description: spec of refs to push (in localRefPattern:remoteRefPattern format); see https://git-scm.com/book/en/v2/Git-Internals-The-Refspec for details
+      default: " "
   username:
     string:
       constraints: { minLength: 1 }
@@ -29,6 +31,7 @@ run:
     files:
       /cmd.sh:
     envVars:
+      srcRepo:
       dstRepo:
       refSpec:
       username:
