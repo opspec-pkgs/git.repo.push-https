@@ -1,0 +1,37 @@
+name: github.com/opspec-pkgs/git.push-https
+description: pushes a git repo via https transport
+inputs:
+  srcRepo:
+    dir:
+      description: source of the push
+      default: .
+  dstRepo:
+    string:
+      description: destination of the push; can be a Url or name of a remote
+  refSpec:
+    string:
+      destination: spec of refs to push (in localRefPattern:remoteRefPattern format); see https://git-scm.com/book/en/v2/Git-Internals-The-Refspec for details
+  username:
+    string:
+      constraints: { minLength: 1 }
+      description: username for destination auth
+  password:
+    string:
+      constraints: { minLength: 1 }
+      description: password for destination auth
+      isSecret: true
+version: 1.0.0
+run:
+  container:
+    cmd: [ /cmd.sh ]
+    dirs:
+      /srcRepo: srcRepo
+    files:
+      /cmd.sh:
+    envVars:
+      dstRepo:
+      refSpec:
+      username:
+      password:
+    image: { ref: 'opspecpkgs/git.push-https:1.0.0' }
+    workDir: /srcRepo
