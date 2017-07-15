@@ -1,7 +1,7 @@
-# problem statement
+# Problem statement
 pushes a git repo via https transport
 
-# example usage
+# Example usage
 
 > note: in examples, VERSION represents a version of the git.push-https pkg
 
