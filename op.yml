@@ -35,5 +35,5 @@ run:
       refSpec:
       username:
       password:
-    image: { ref: 'opspecpkgs/git.push-https:1.0.0' }
+    image: { ref: 'opspecpkgs/git.push-https:1.0.1' }
     workDir: /srcRepo
