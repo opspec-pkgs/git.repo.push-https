@@ -22,16 +22,15 @@ inputs:
       constraints: { minLength: 1 }
       description: password for destination auth
       isSecret: true
-version: 1.0.0
+version: 1.0.1
 run:
   container:
     cmd: [ /cmd.sh ]
     dirs:
-      /srcRepo: srcRepo
+      /srcRepo: $(srcRepo)
     files:
       /cmd.sh:
     envVars:
-      srcRepo:
       dstRepo:
       refSpec:
       username:

@@ -1,46 +1,45 @@
 [![Build Status](https://travis-ci.org/opspec-pkgs/git.push-https.svg?branch=master)](https://travis-ci.org/opspec-pkgs/git.push-https)
 
+<img src="icon.svg" alt="icon" height="100px">
+
 # Problem statement
 
 pushes a git repo via https transport
 
+# Format
+
+this version of the pkg is in [![opspec 0.1.5](https://img.shields.io/badge/opspec-0.1.5-brightgreen.svg?colorA=6b6b6b&colorB=fc16be)](https://opspec.io/0.1.5/packages.html) format
+
 # Example usage
 
-> note: in examples, VERSION represents a version of the git.push-https
-> pkg
-
-## install
+## Install
 
 ```shell
-opctl pkg install github.com/opspec-pkgs/git.push-https#VERSION
+opctl pkg install github.com/opspec-pkgs/git.push-https#1.0.1
 ```
 
-## run
+## Run
 
 ```
-opctl run github.com/opspec-pkgs/git.push-https#VERSION
+opctl run github.com/opspec-pkgs/git.push-https#1.0.1
 ```
 
-## compose
+## Compose
 
 ```yaml
 op:
-   pkg: { ref: github.com/opspec-pkgs/git.push-https#VERSION }
-   inputs:
-      srcRepo:
-      username:
-      password:
-      # begin optional args
-      dstRepo:
-      refSpec:
-      # end optional args
+  pkg: { ref: github.com/opspec-pkgs/git.push-https#1.0.1 }
+  inputs:
+    username:
+    password:
 ```
 
 # Support
 
 join us on
 [![Slack](https://opspec-slackin.herokuapp.com/badge.svg)](https://opspec-slackin.herokuapp.com/)
-or [open an issue](https://github.com/opspec-pkgs/git.push-https/issues)
+or
+[open an issue](https://github.com/opspec-pkgs/git.push-https/issues)
 
 # Releases
 
