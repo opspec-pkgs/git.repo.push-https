@@ -32,6 +32,10 @@ op:
   inputs:
     username:
     password:
+    # params w/ default
+    srcRepo:
+    dstRepo:
+    refSpec:
 ```
 
 # Support
