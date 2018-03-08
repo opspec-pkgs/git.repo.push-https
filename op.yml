@@ -1,4 +1,4 @@
-name: github.com/opspec-pkgs/git.push-https
+name: github.com/opspec-pkgs/git.repo.push-https
 description: pushes a git repo via https transport
 inputs:
   srcRepo:
@@ -22,7 +22,7 @@ inputs:
       constraints: { minLength: 1 }
       description: password for destination auth
       isSecret: true
-version: 1.0.1
+version: 1.1.0
 run:
   container:
     cmd: [ /cmd.sh ]
@@ -35,5 +35,5 @@ run:
       refSpec:
       username:
       password:
-    image: { ref: 'opspecpkgs/git.push-https:1.0.1' }
+    image: { ref: 'opspecpkgs/git.repo.push-https:1.1.0' }
     workDir: /srcRepo
